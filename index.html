@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Deli Menu</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: black;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe 
+    id="menuFrame"
+    src="https://canva.link/2c5kkb73bs58p1g">
+  </iframe>
+
+  <script>
+    const canvaLink = "https://canva.link/2c5kkb73bs58p1g";
+    const refreshEvery = 5 * 60 * 1000; // 5 minutes
+
+    setInterval(() => {
+      document.getElementById("menuFrame").src =
+        canvaLink + "?refresh=" + Date.now();
+    }, refreshEvery);
+  </script>
+</body>
+</html>
